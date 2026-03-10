@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=League+Spartan:wght@100..900&display=swap');
+
+/*Making variable & basic */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+:root {
+    --color-primary: #fff;
+    --color-secondary: #e86ed6;
+    --color-tertiary: #777;
+    --color-text: #111;
+    --shadow: 0 2px 40px 8px rgba(15, 15, 15, .15);
+    --transition: all .4s ease-in-out;
+    --charcoal: #0f0f0f;
+    --deep-gray: #1b1b1b;
+    --light-grey: rgba(255, 255, 255, 0.12);
+    --white: #ffffff;
+    --gold: #d4af37;
+    --gradient: linear-gradient(135deg, #d4af37, #f0c75e);
+
+    --width-lg: 85%;
+    --width-sm: 95%;
+
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    color: var(--color-text);
+    /* line-height: 1.7; */
+    overflow-x: hidden;
+    /* padding-top: 5rem; */
+    font-optical-sizing: auto;
+}
+
+a {
+    color: var(--color-text);
+}
+
+span {
+    font-size: .9rem;
+}
+
+
+.container {
+    margin: 0 auto;
+    width: var(--width-lg);
+}
+
+section {
+    padding: 2rem 0 1rem;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 0.6rem;
+}
+
+.title {
+    text-align: center;
+    /* margin-bottom: 4rem; */
+}
+
+.title h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+    color: var(--color-secondary);
+    display: inline-block;
+    position: relative;
+}
+
+.title p {
+    padding: auto;
+}
+
+/* CONTACT SECTION */
+/* .contact {
+    background: #f6f9f9;
+} */
+
+/* .contact-container .title {
+    text-align: center;
+    margin-bottom: 2px;
+} */
+
+/* .contact-container {
+    display: flex;
+    gap: 2rem;
+} */
+
+.contact-form .form-name {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.contact-container .contact-form input,
+.contact-container .contact-form textarea {
+    border: .1rem solid var(--color-secondary);
+    width: 100%;
+    padding: 1rem;
+    margin: .5rem 0;
+    border-radius: 5px;
+}
+
+.contact-container .contact-form .btn {
+    position: relative;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 11;
+    border: 1px solid var(--color-secondary);
+    background: 1px solid var(--color-secondary);
+    transition: var(--transition);
+}
+
+.contact-form .btn span {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-secondary);
+    height: 0;
+    width: 100%;
+    border-bottom: .2rem solid var(--color-text);
+    transition: var(--transition);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.contact-form .btn:hover span {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+.contact-form .btn:hover {
+    color: var(--color-primary);
+}
+
+.contact-container .right .contact-desc {
+    margin: 1.2rem 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.contact-item strong {
+    display: inline-block;
+    min-width: 75px;
+    color: #ff4fd8;
+    /* matches your pink theme */
+    font-weight: 600;
+}
+
+.contact-item span,
+.contact-item a {
+    color: #444;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #ff4fd8;
+    text-decoration: underline;
+}
+.contact-text p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* CONTACT INFO */
+/* .contact-info {
+    color: #ffffff;
+}
+
+.contact-text h5 {
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.contact-text p {
+    color: #ffffff;
+    line-height: 1;
+} */
+
+/* CONTACT ROW ALIGNMENT FIX */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+/* ICON */
+.contact-icon {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    border-radius: 50%;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 18px;
+}
+
+/* TEXT */
+.contact-text h5 {
+    margin: 0 0 6px 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.contact-text p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.75;
+    /* line-height: 1.3; */
+}

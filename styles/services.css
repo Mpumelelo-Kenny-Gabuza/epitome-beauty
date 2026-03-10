@@ -1,0 +1,633 @@
+
+:root {
+    --color-primary: #fff;
+    --color-secondary: #e86ed6;
+    --color-tertiary: #777;
+    --color-text: #111;
+    --shadow: 0 2px 40px 8px rgba(15, 15, 15, .15);
+    --transition: all .4s ease-in-out;
+    --charcoal: #0f0f0f;
+    --deep-gray: #1b1b1b;
+    --light-grey: rgba(255, 255, 255, 0.12);
+    --white: #ffffff;
+    --gold: #d4af37;
+    --gradient: linear-gradient(135deg, #d4af37, #f0c75e);
+
+    --width-lg: 85%;
+    --width-sm: 95%;
+
+}
+
+a {
+    color: var(--color-text);
+}
+
+span {
+    font-size: .9rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+.container {
+    margin: 0 auto;
+    width: var(--width-lg);
+}
+
+section {
+    padding: 6rem 0 3rem;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 0.6rem;
+}
+
+.title {
+    text-align: center;
+    /* margin-bottom: 4rem; */
+}
+
+.title h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+    color: var(--color-secondary);
+    display: inline-block;
+    position: relative;
+}
+
+.title h2::before {
+    position: absolute;
+    content: '';
+    bottom: -10%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 8rem;
+    height: .1rem;
+    background: var(--color-secondary);
+    margin-top: 1px;
+
+}
+
+/* SERVICES SECTION */
+.services {
+    padding-top: 3rem;
+    background: #f8f8f8;
+}
+
+.service-border {
+    padding: 10px;
+    border: 1px solid plum;
+}
+
+.services-container .col img {
+    width: 100%;
+    /* Fill the column width */
+    height: 150px;
+    /* Or whatever fixed height you want */
+    object-fit: cover;
+    /* Ensures images cover the box without stretching */
+    display: block;
+    border-radius: 8px;
+}
+
+.services-container {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.services-container::-webkit-scrollbar {
+    height: 2px;
+}
+
+.services-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-secondary);
+    border-radius: 4px;
+}
+
+.services-container .col {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+}
+
+.services-container .col .info {
+    padding: 1rem 1.5rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: var(--transition);
+    transition-duration: .3s;
+}
+
+.services-container .col h4 {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: .9rem;
+    color: var(--color-tertiary);
+}
+
+.services-container .col:hover h4 {
+    color: var(--color-secondary);
+}
+
+.services-container .col ul {
+    display: flex;
+    gap: 2rem;
+    color: var(--color-tertiary);
+    font-size: 1.2rem;
+}
+
+.services-container ul .dis {
+    text-decoration: line-through;
+}
+
+.services-container .col a {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: snow;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.services-container .col a:hover {
+    color: var(--deep-gray);
+}
+
+.services-container .col:hover .info {
+    background: var(--color-primary);
+    box-shadow: var(--shadow);
+    top: -2.2rem;
+}
+
+.services-container .col:nth-child(2):hover .info,
+.services-container .col:nth-child(4):hover .info {
+    top: 2.2rem;
+}
+
+.services-container .col .info p {
+    color: var(--color-tertiary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* HERO */
+.service-hero {
+    height: 100vh;
+    /* width: 100vw; */
+    background: url("images/nails_service1.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+}
+
+/* Left-aligned hero content */
+.hero-content.left-text {
+    position: relative;
+    color: #f3efef;
+    max-width: 1000px;
+    margin-left: 3rem;
+    text-align: left;
+}
+
+.hero-content.left-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content.left-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.service-hero h1,
+.service-hero p {
+    position: relative;
+    z-index: 1;
+}
+
+.service-hero h1 {
+    font-size: 3rem;
+}
+
+.service-hero p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* CONTENT **/
+.service-content {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.service-content h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* TABLE */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.price-table th,
+.price-table td {
+    padding: 1rem;
+    text-align: left;
+}
+
+.price-table thead {
+    background: #c2185b;
+    color: #fff;
+}
+
+.price-table tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+.price-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
+/* GO BACK BUTTON */
+.back-btn {
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #c2185b;
+    text-decoration: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    transition: 0.3s;
+    border: none;
+}
+
+.back-btn:hover {
+    background: #c2185b;
+    color: #fff;
+}
+
+/* BUTTON */
+.book-btn {
+    display: block;
+    width: fit-content;
+    margin: 1.6rem auto 0;
+    padding: 0.9rem 2.5rem;
+    background: linear-gradient(135deg, #c2185b, #e91e63);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.book-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .service-hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+
+.nails-description {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.nails-description h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.nails-description p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+
+/*===============================================
+              WAXING STYLE
+==================================================*/
+
+/* HERO (TEXT ONLY) */
+.simple-hero {
+    padding: 80px 20px;
+    background: #f7e6eb;
+    text-align: center;
+}
+
+.simple-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.simple-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* SERVICES GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* SERVICE CARD */
+.service-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* SERVICE IMAGE */
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEXT */
+.service-card h3 {
+    margin: 1rem 0 0.3rem;
+    font-size: 1.1rem;
+}
+
+.service-card p {
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+    color: #b85c8e;
+}
+
+/* MODERN HERO WITH BACKGROUND IMAGE */
+.modern-hero {
+    position: relative;
+    height: 90vh;
+
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* DARK OVERLAY */
+.modern-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* HERO CONTENT */
+.modern-hero .hero-content {
+    position: relative;
+    max-width: 600px;
+    margin-left: 8%;
+    color: #fff;
+}
+
+.modern-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.modern-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* BUTTON */
+.back-btn {
+    background: #fff;
+    color: #c2185b;
+    padding: 0.7rem 1.6rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* WAXING BACKGROUND IMAGE */
+.waxing-hero {
+    background-image: url("images/ladies-waxing.jpg");
+}
+
+/*============================================
+                  LASHESHES STYLE 
+================================================== */
+/* Lashes Hero Section */
+.lashes-hero {
+    background: url('images/la.jpg') no-repeat center center/cover;
+    position: relative;
+    color: #fff;
+    /* padding: 100px 20px; */
+}
+
+.lashes-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* dark overlay for readability */
+    z-index: 1;
+}
+
+.lashes-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+
+/* CONTACT SECTION */
+.contact {
+    background: #f6f9f9;
+}
+
+.contact-container .title {
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-form .form-name {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.contact-container .contact-form input,
+.contact-container .contact-form textarea {
+    border: .1rem solid var(--color-secondary);
+    width: 100%;
+    padding: 1rem;
+    margin: .5rem 0;
+}
+
+.contact-container .contact-form .btn {
+    position: relative;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 11;
+    border: .1rem solid var(--color-secondary);
+    background: none;
+    transition: var(--transition);
+}
+
+.contact-form .btn span {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-secondary);
+    height: 0;
+    width: 100%;
+    border-bottom: .2rem solid var(--color-text);
+    transition: var(--transition);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.contact-form .btn:hover span {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+.contact-form .btn:hover {
+    color: var(--color-primary);
+}
+
+.contact-container .right .contact-desc {
+    margin: 1.2rem 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.contact-item strong {
+    display: inline-block;
+    min-width: 75px;
+    color: #ff4fd8;
+    /* matches your pink theme */
+    font-weight: 600;
+}
+
+.contact-item span,
+.contact-item a {
+    color: #444;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #ff4fd8;
+    text-decoration: underline;
+}
+.contact-text p a {
+    color: #fff;
+    text-decoration: none;
+}
